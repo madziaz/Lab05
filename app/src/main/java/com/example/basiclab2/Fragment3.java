@@ -9,11 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.basiclab2.databinding.FragmentSecondBinding;
+import com.example.basiclab2.databinding.Fragment3Binding;
+import com.example.basiclab2.databinding.FragmentFirstBinding;
 
-public class SecondFragment extends Fragment {
+public class Fragment3 extends Fragment {
 
-    private FragmentSecondBinding binding;
+    private Fragment3Binding binding;
 
     @Override
     public View onCreateView(
@@ -21,7 +22,7 @@ public class SecondFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentSecondBinding.inflate(inflater, container, false);
+        binding = Fragment3Binding.inflate(inflater, container, false);
         return binding.getRoot();
 
     }
@@ -29,18 +30,18 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
+        binding.button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_fragment3);
+                NavHostFragment.findNavController(Fragment3.this)
+                        .navigate(R.id.action_fragment3_to_FirstFragment);
             }
         });
-        binding.buttonS2.setOnClickListener(new View.OnClickListener() {
+        binding.button33.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
+                NavHostFragment.findNavController(Fragment3.this)
+                        .navigate(R.id.action_fragment3_to_SecondFragment2);
             }
         });
     }

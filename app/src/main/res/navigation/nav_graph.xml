@@ -10,19 +10,35 @@
         android:name="com.example.basiclab2.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
-
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_fragment32"
+            app:destination="@id/fragment3" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.basiclab2.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
-
+        <action
+            android:id="@+id/action_SecondFragment_to_fragment3"
+            app:destination="@id/fragment3" />
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.example.basiclab2.Fragment3"
+        android:label="fragment_3"
+        tools:layout="@layout/fragment_3" >
+        <action
+            android:id="@+id/action_fragment3_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_fragment3_to_SecondFragment2"
+            app:destination="@id/SecondFragment" />
     </fragment>
 </navigation>
